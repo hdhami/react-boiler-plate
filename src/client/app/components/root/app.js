@@ -10,14 +10,15 @@ const AppContainer = styled.div`
     background: #f9f9f9;
     font-weight: 400;
     padding: 0 24px;
-    height: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 `;
 
-const App = ({ test }) => {
-    return <AppContainer>Here goes the code {test}</AppContainer>;
-};
+const App = ({ test }) => <AppContainer test={test}>Here goes the code </AppContainer>;
+
 App.propTypes = {
-    test: string.isRequired,
+    test: string.isRequired
 };
 
 export default App;
